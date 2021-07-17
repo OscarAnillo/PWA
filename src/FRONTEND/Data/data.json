@@ -1,0 +1,5 @@
+[
+    {"id":1, "brand":"Guerlain","perfume":"L'Homme Ideal","release-date":"June 14 2016", "image":"https://www.sephora.qa/dw/image/v2/BCVW_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw88cdc55d/images/hi-res/SKU/SKU_3/304052_swatch.jpg?sw=585&sh=585&sm=fit", "text":"L’Homme Ideal by Guerlain is a Woody Aromatic fragrance for men."},
+    {"id":2,"brand":"Dior","perfume":"Dior Homme","release-date":"March 31 2011", "image":"https://www.brandfield.com/media/catalog/product/cache/image/9df78eab33525d08d6e5fb8d27136e95/3/3/3348900838185_1.jpg","text":"Dior Homme by Dior is a Woody Floral Musk fragrance for men."},
+    {"id":3,"brand":"Chanel","perfume":"Allure Homme","release-date":"December 25 2005", "image":"https://es.swedishface.com/image/cache/data/chanel/chanel-allure-homme-900x900.jpg", "text":"Allure Homme by Chanel is a Amber Woody fragrance for men."}
+]   
