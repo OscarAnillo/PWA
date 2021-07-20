@@ -23,8 +23,14 @@ import {gsap} from 'gsap'
         cardImage: {
             height: 390,
             [theme.breakpoints.up('sm')]: {
-                height: 540,
-            }
+                height: 550,
+                transition: '.2s'
+            },
+            [theme.breakpoints.up('md')]: {
+                '&:hover': {
+                    height: 570
+                },
+            },
         }
     }))
 
@@ -40,7 +46,7 @@ import {gsap} from 'gsap'
             <div ref={divRef}>
                 <Grid container justifyContent={"center"}>
                     {data.map(item => (
-                            <Grid item xs={12} sm={4} md={3} key={item.id}>   
+                            <Grid item xs={12} sm={6} md={3} key={item.id}>   
                                 <Card variant="outlined" className={classes.cardStyle}>
                                     <CardHeader title={item.brand} subheader={item.perfume}/>
                                     <CardMedia image={item.image} className={classes.cardImage}/>
