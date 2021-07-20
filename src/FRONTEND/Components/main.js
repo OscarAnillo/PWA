@@ -3,7 +3,7 @@ import {useEffect, useRef } from 'react';
 import data from '../Data/data.json'
 
 /* Material - UI */
-import { Card, CardHeader, CardMedia, CardContent, IconButton, Typography, Button } from '@material-ui/core';
+import { Grid, Card, CardHeader, CardMedia, CardContent, CardActions, Typography, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 /* Icons */
@@ -13,30 +13,17 @@ import {AiOutlineHeart} from 'react-icons/ai';
 import {gsap} from 'gsap'
 
     const useStyles = makeStyles(theme => ({
-        divStyle: {
-            width: '90%',
-            margin: 'auto',
-            [theme.breakpoints.up('sm')]: {
-                display: 'inline-block',
-                width: '25%',
-                margin: '.8em'
-            }
-        },
         cardStyle: {
-            width: '100%',
             height: 600,
-            margin: 'auto',
             [theme.breakpoints.up('sm')]: {
-                height: 760
+                height: 740,
             }
             
         },
         cardImage: {
-            width: '100%',
-            height: 380,
-            margin: 'auto',
+            height: 390,
             [theme.breakpoints.up('sm')]: {
-                height: 560
+                height: 540,
             }
         }
     }))
@@ -51,18 +38,20 @@ import {gsap} from 'gsap'
 
         return (
             <div ref={divRef}>
-            {data.map(item => (
-                <div className={classes.divStyle} key={item.id}>    
-                    <Card variant="outlined" elevation={3} className={classes.cardStyle}>
-                        <CardHeader title={item.brand} subheader={item.perfume}/>
-                        <CardMedia image={item.image} className={classes.cardImage}/>
-                        <CardContent><Typography variant="body2">{item.text}</Typography></CardContent>
-                        <IconButton>
-                            <Button><AiOutlineHeart />like</Button>
-                        </IconButton>
-                    </Card>
-                </div>
-            ))}
+                <Grid container justifyContent={"center"}>
+                    {data.map(item => (
+                            <Grid item xs={12} sm={4} md={3} key={item.id}>   
+                                <Card variant="outlined" className={classes.cardStyle}>
+                                    <CardHeader title={item.brand} subheader={item.perfume}/>
+                                    <CardMedia image={item.image} className={classes.cardImage}/>
+                                    <CardContent><Typography variant="body2">{item.text}</Typography></CardContent>
+                                    <CardActions disableSpacing>
+                                        <Button><AiOutlineHeart /></Button>
+                                    </CardActions>
+                                </Card>
+                            </Grid>
+                    ))}
+            </Grid>
             </div>
         )
     }
